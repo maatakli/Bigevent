@@ -59,7 +59,7 @@
       <tr>
         <td>{{$value.title}}</td>
         <td>{{$value.cate_name}}</td>
-        <td>{{$value.pub_date}}</td>
+        <td>{{$value.pub_date|dataFormat}}</td>
         <td>{{$value.state}}</td>
         <td>
           <button type="button" class="layui-btn layui-btn-xs">编辑</button>
@@ -69,13 +69,13 @@
       {{/each}}
     </script>
 
-    <!-- 分类可选项的模板结构
+    <!-- 分类可选项的模板结构 -->
     <script type="text/html" id="tpl-cate">
       <option value="">所有分类</option>
       {{each data}}
       <option value="{{$value.Id}}">{{$value.name}}</option>
       {{/each}}
-    </script> -->
+    </script>
 
     <!-- 导入第三方的 JS 插件 -->
     <script src="/assets/lib/layui/layui.all.js"></script>
